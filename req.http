@@ -1,0 +1,73 @@
+### Register User
+POST http://localhost:5000/user-api/Register
+Content-Type: application/json
+
+{
+    "username": "Ashwith",
+    "password": "Ashwith",
+    "Email": "ashwith0679@gmail.com",
+    "profile pic":"https://tse1.mm.bing.net/th?id=OIP.tJYl02NAHsRL3fzirIrpKwHaFe&pid=Api&P=0&h=180",
+    "Bio":"Never trust anyone",
+    "posts":[],
+    "friends":[]
+}
+
+### Login User
+POST http://localhost:5000/user-api/Login
+Content-Type: application/json
+
+{
+    "username": "Spoorthik",
+    "password": "Spoorthik"
+}
+
+### Create Post
+POST http://localhost:5000/user-api/AddPost
+Content-Type: application/json
+
+{
+    
+  "username": "Ashwith",
+  "post": "https://tse1.mm.bing.net/th?id=OIP.wwxK07x0Umfnh0l-nrjxjgHaDg&pid=Api&P=0&h=180",
+  "coments":[]
+}
+
+
+### To add new friend
+POST http://localhost:5000/user-api/AddFriend
+Content-Type: application/json
+
+{
+    "username":"Lekhan",
+    "friend":"Spoorthik"
+}
+
+### To get all posts of user
+
+GET http://localhost:5000/user-api/Posts
+Content-Type: application/json
+
+{
+    "headers": { "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkJ1bm55IiwiaWF0IjoxNzI2NzcxOTU1LCJleHAiOjE3MjY4NTgzNTV9.4qQ16JIc7fna3UMXlO9CXOr_gQFAojWWzKEI6cOmT04" }
+}
+### to get posts of a particular user
+
+GET http://localhost:5000/user-api/Posts/Ashwith
+
+### post the coments
+POST http://localhost:5000/user-api/comment
+Content-Type: application/json
+
+{
+    "_id":"66ed6f4183544dd68760a3f6",
+    "username":"Sporthik",
+    "coment":"good pictfucvgj"
+}
+
+### to get all users
+GET http://localhost:5000/user-api/users
+
+### delete comment
+PUT http://localhost:5000/user-api/deletecomment
+
+
